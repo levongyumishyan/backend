@@ -25,7 +25,10 @@ app.use(cors());
 app.use(express.json());
 
 const authRoutes = require("./routes/auth");
+const trajetRoutes = require("./routes/trajet");
+
 app.use("/api/auth", authRoutes);
+app.use("/api/trajets", trajetRoutes);
 
 app.get("/", (req, res) => res.send("API is running"));
 
